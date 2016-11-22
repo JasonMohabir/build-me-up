@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="row">
-      <div class="large-12 columns"> <!-- takes up all 12 columns in the row -->
+      <div class="large-12 columns"> <!-- takes up all 12 columns in the row (see below comment) -->
         <h1>Welcome to Team Buttercup's Foundation Example</h1>
       </div>
     </div>
@@ -20,72 +20,53 @@
         <div class="callout"> <!-- places a box around the text -->
           <h3>Here's a header!</h3>
           <p>Here's a paragraph.</p>
-          <div class="row">
-            <div class="large-4 columns"> <!-- defining small, medium, large differently displays the screen differently for different-sized screens -->
-            <!-- since Foundation is "mobile-first", if you only define it for small, it'll carry up to medium and large.-->
-            <!-- however, if you only define medium or large, the sizes below it will not have the same behavior.-->
-            <!-- in the following cases, large is defined to take up 4 columns each in the row. If you look at the page with a medium or small screen, -->
-            <!-- it'll take up the default (all 12 columns in the row). -->
-              <p><a href="http://foundation.zurb.com/docs">Link to Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Link to Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Link to Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="medium-4 medium-push-2 columns"> <!-- on medium, and thus large screens, these will take up 4 columns each.-->
-            <!-- in addition, the "push" tag will set it automatically to start at the third column, rather than the first column (it adds the # in -->
-			<!-- push-# to 1 to find the starting column) -->
-              <p><a href="http://github.com/zurb/foundation">Link to Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="medium-4 medium-pull-2 columns"> <!-- pull is similar: it subtracts the # in pull-# from 12 to find the ending column. -->
-            <!-- in this example, it ends at 10 (since it's 12-2), and its size is 4, so it starts at 6. -->
-              <p><a href="https://twitter.com/ZURBfoundation">Link to @zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>
-          </div>
+            
         </div>
       </div>
     </div>
 
+	<!-- defining small, medium, large differently displays the screen differently for different-sized screens -->
+    <!-- since Foundation is "mobile-first", if you only define it for small, it'll carry up to medium and large.-->
+    <!-- however, if you only define medium or large, the sizes below it will not have the same behavior.-->
+	
     <div class="row">
-      <div class="large-8 medium-8 columns">
+      <div class="large-8 medium-8 columns"> <!-- nested grids allow you to have multiple grids in different sections of the screen -->
         <h5>More grid stuff:</h5>
 
         <div class="row">
           <div class="large-12 columns">
-            <div class="primary callout">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
+            <div class="primary callout"> <!-- you can use primary, secondary, success, warning, and alert to have different styles of callouts which -->
+            							  <!-- you can easily modify in the css file -->
+              <p><strong>This is a twelve column section in a row that takes up 8 columns of the page's overall 12 (The buttons on the right take up the other four).</strong>
+              Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="large-6 medium-6 columns">
-            <div class="primary callout">
+            <div class="secondary callout">
               <p>Six columns</p>
             </div>
           </div>
           <div class="large-6 medium-6 columns">
-            <div class="primary callout">
+            <div class="secondary callout">
               <p>Six columns</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
+            <div class="success callout">
               <p>Four columns</p>
             </div>
           </div>
           <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
+            <div class="warning callout">
               <p>Four columns</p>
             </div>
           </div>
           <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
+            <div class="alert callout">
               <p>Four columns</p>
             </div>
           </div>
@@ -93,12 +74,12 @@
 
         <hr />
 
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
+        <h5>We bet you'll need a form somewhere:</h5>
+        <form> <!-- don't forget the form tag to enclose your form -->
           <div class="row">
             <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
+              <label>Input Label</label> <!-- use the label tag to have a sleek label above your entry -->
+              <input type="text" placeholder="large-12.columns" /> <!-- then, use the input tag to specify what kind of input you want -->
             </div>
           </div>
           <div class="row">
@@ -123,7 +104,7 @@
           <div class="row">
             <div class="large-12 columns">
               <label>Select Box</label>
-              <select>
+              <select> <!-- use the select tag for drop-down menus -->
                 <option value="husker">Husker</option>
                 <option value="starbuck">Starbuck</option>
                 <option value="hotdog">Hot Dog</option>
@@ -133,21 +114,20 @@
           </div>
           <div class="row">
             <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
+              <label>Choose Your Favorite</label> <!-- input type="radio" for radio buttons -->
               <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
               <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
             </div>
             <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
+              <label>Check these out</label> <!-- input type="checkbox" for checkboxes -->
               <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
               <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
             </div>
           </div>
           <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
+          	<div class="small-4 small-push-4"> <!-- use [size]-push-# and [size]-pull-# to bring the beginning or end of a column to the right or left, respectively -->
+        	  <input type="submit" class="button" value="Submit"> <!-- type="submit" for submit buttons -->
+          	</div>
           </div>
         </form>
       </div>
