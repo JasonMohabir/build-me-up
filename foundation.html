@@ -132,6 +132,10 @@
         </form>
       </div>
 
+		<!-- here are some buttons - similarly to callouts, you can use primary, secondary, success, alert, and error
+		and set those classes in the css file to have different styles of buttons (and you can create your own classes
+		if you'd like. -->
+
       <div class="large-4 medium-4 columns">
         <h5>Try one of these buttons:</h5>
         <p><a href="#" class="button">Simple Button</a><br/>
@@ -141,11 +145,93 @@
         <div class="callout">
           <h5>So many components, girl!</h5>
           <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
+          <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a> 
+          <!-- actually check this out ^^^ it's everything you need to know! -->
         </div>
       </div>
     </div>
-
+    
+    <br><br><br>
+    
+    <div class="row">
+		<div class="small-10 columns">
+			<!-- use an orbit to show slides of pictures that automatically (or manually, if you want that) go to the next
+			slide after a certain number of seconds -->
+			<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+				<ul class="orbit-container">
+					<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+					<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+					<li class="is-active orbit-slide">
+						<img class="orbit-image" src="assets/img/orbit/01.jpg" alt="Space">
+						<figcaption class="orbit-caption">Slide 1</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="assets/img/orbit/02.jpg" alt="Space">
+						<figcaption class="orbit-caption">Slide 2</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="assets/img/orbit/03.jpg" alt="Space">
+						<figcaption class="orbit-caption">Slide 3</figcaption>
+					</li>
+					<li class="orbit-slide">
+						<img class="orbit-image" src="assets/img/orbit/04.jpg" alt="Space">
+						<figcaption class="orbit-caption">Slide 4</figcaption>
+					</li>
+				</ul>
+				<nav class="orbit-bullets">
+					<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+					<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+					<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+					<button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+				</nav>
+			</div>
+		</div>
+	</div>
+	
+	<!-- tooltips show text over an area. They're usually used to show a user something that may not make sense to them
+	immediately, without having them have to open a new page/area of the page.
+	Use the data-disable-hover and data-click-open to determine a mixture of whether or not they should
+	show when hovered, and whether or not they will stay open once clicked.
+	In the class declaration, use left/right/top to determine what side of the text the tooltip opens on, if there's room.-->
+	
+	<div class="row">
+		<div class="small-6 columns">
+			<span data-tooltip aria-haspopup="true" class="has-tip right" data-disable-hover="false" tabindex="2" title="Use the title attribute to change the text that opens up!">This tooltip will stay open once clicked, until clicked again.</span>
+			<span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="false" data-disable-hover="false" tabindex="2" title="Move away from this, and it'll close.">This one will only be open when hovered.</span>
+		</div>
+	</div>
+	
+	<br><br>
+	
+	<!-- switches allow you to set a boolean value. They can be used as singletons, radio buttons, and have labels.
+	Here's an example: -->
+	
+	<div class="row">
+		<div class="small-12"
+			<label>Example switch</label>
+			<div class="switch">
+				<input class="switch-input" id="yes-or-no" type="checkbox" name="yesno">
+				<label class="switch-paddle" for="yes-or-no">
+    				<span class="switch-active" aria-hidden="true">Yes</span>
+    				<span class="switch-inactive" aria-hidden="true">No</span>
+				</label>
+			</div>
+	<div>
+	<!-- finally, sliders allow you to set a variable to some value in a certain range. -->
+	
+	<div class="row">
+		<div class="small-10 columns">
+			<label>Example slider</label>
+  			<div class="slider" data-slider data-initial-start="50">
+    			<span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"></span>
+    			<span class="slider-fill" data-slider-fill></span>
+  			</div>
+		</div>
+		<div class="small-2 columns">
+  			<input type="number" id="sliderOutput1">
+		</div>
+	</div>
+	
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
